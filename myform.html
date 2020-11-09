@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title> 05211940000008 - Bena Bianda </title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+ <style>
+ .label{
+  float: left;
+  width: 120px;
+ }
+ .infobox{
+  width: 200px;
+ }
+ .error{
+  color: red;
+  padding-left: 10px;
+ }
+ .btn{
+  margin-left: 125px;
+  margin-top: 10px;
+  font-family: 'Syne Tactile', cursive;
+ }
+ .user{
+  font-family: 'Source Sans Pro', sans-serif;
+ }
+ #footer{
+  background-color:LightPink;
+  text-align:center;
+ }
+ </style>
+</head>
+ <body>
+ <div class="container">
+ <!--header-->
+ <!--cara untuk membuat pesan peringatan yang telah ditentukan sebelumnya.-->
+ <div class="alert alert-danger">
+  <strong>Danger!</strong> It's indicate an important thing.
+ </div>
+
+ <!--Content-->
+ <!--membuat baris.-->
+ <div class="row">
+  <!--mengelompokkan kolom secara bersama-sama secara otomatis dengan perangkat kecil-lebar layar sama dengan atau lebih besar dari 576 pixel.-->
+  <div class="col-sm-6">
+   <form id="signup" method="post" action="">
+    <div class="user">
+     <span class="label"><b> NRP * </b></span>
+     <input type="text" class="infobox" name="userid"/>
+     <span class="error">Tidak boleh kosong yaa </span>
+    </div>
+<script>
+  $(document).ready(function() {
+   //class dengan nama infobox akan menjalankan fungsi nya saat form fokus.
+   $(".infobox").focus(function(){
+    //class dengan nama infobox akan fokus dengan background-color yellow.
+    $(".infobox").css("background-color", "yellow");
+   });
+   //class dengan nama error yang disembunyikan terlebih dahulu.
+   $('.error').hide();
+   //ketika meninggalkan class submit akan muncul alert.
+   $(".submit").mouseleave(function(){
+    alert("Terima Kasih telah mengunjungi!!");
+   });
+   //class dengan nama submit di klik.
+   $('.submit').click(function(event){
+    //membaca isi text box dengan class name infobox.
+    var data=$('.infobox').val();
+    //membaca isi text box, dicari berapa panjang karakternya dan disimpan di variable len.
+    var len=data.length;
+    //percabangan yang memiliki nilai saat kondisi bernilai benar.
+    if(len<1){
+     //class dengan nama error akan ditampilkan.
+     $('.error').show();
+     //akan membatalkan event jika dapat dibatalkan, yang berarti bahwa tindakan default yang dimiliki peristiwa tersebut tidak akan terjadi.
+     event.preventDefault();
+    }
+    //menjalankan kode yang berbeda apabila fungsi IF dalam kondisi false.
+    else {
+     //class dengan nama error akan disembunyikan.
+     $('.error').hide();
+    }
+   });
+  });
+</script>
+
+    <div class="submit1">
+     <!--membuat button dengan class btn btn-danger yang akan menyebabkan button berwarna merah.-->
+     <input class="submit btn btn-danger" type="submit" value="Submit"></input>
+    </div>
+   </form>
+  </div>
+  <!--mengelompokkan kolom secara bersama-sama secara otomatis dengan perangkat kecil-lebar layar sama dengan atau lebih besar dari 576 pixel.-->
+  <div class="col-sm-6">
+     <!--insert gif as image.-->
+     <img src = "https://media.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif" style="float:right;width="150" height="200"> <br>
+  </div>
+ </div>
+ <div class="row">
+  <!-- kosongin aja -->
+  <div class="col-sm-6"></div>
+    <div class="col-sm-6" align="right">
+     <!--membuat spinner.-->
+     <div class="spinner-grow text-muted"></div>
+     <div class="spinner-grow text-primary"></div>
+     <div class="spinner-grow text-success"></div>
+     <div class="spinner-grow text-info"></div>
+     <div class="spinner-grow text-warning"></div>
+     <div class="spinner-grow text-danger"></div>
+     <div class="spinner-grow text-secondary"></div>
+     <div class="spinner-grow text-dark"></div>
+     <div class="spinner-grow text-light"></div>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+ <!--footer-->
+ <!--membuat row dengan id footer-->
+ <div class="row" id="footer">
+  <!--mengelompokkan kolom secara bersama-sama secara otomatis dengan perangkat kecil-lebar layar sama dengan atau lebih besar dari 576 pixel.-->
+  <div class="col-sm-12">
+   <!--membuat pagination apabila memiliki banyak halaman-->
+   <ul class="pagination justify-content-center">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+   </ul>
+  </div>
+ </div>
+ </body>
+</html>
